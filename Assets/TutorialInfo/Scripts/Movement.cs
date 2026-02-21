@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
@@ -18,9 +16,9 @@ public class Movement : MonoBehaviour
     void Update()
     {
         float movX = Input.GetAxis("Horizontal");
-        float movX = Input.GetAxis("Vertical");
+        float movY = Input.GetAxis("Vertical");
 
-        movement = new Vectior3(movY, 0f, movX);
+        movement = new Vector3 (movY, 0f, movX);
 
         transform.Translate(movement * moveSpeed * Time.deltaTime);
     }
